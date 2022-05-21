@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from 'styled-components';
-import Sections from './Sections';
 import Header from "./Header"
 import Catalog from "./Catalog"
+import DateTime from './DateTime';
+import Section from "./Section";
 
 export default function App(){
     return (
@@ -11,7 +12,8 @@ export default function App(){
             <Background>
                 <Routes>
                     <Route path="/" element={<Catalog />}/>
-                    <Route path="/filme/:filmId" element={<Sections />}/>
+                    <Route path="/filme/:filmId" element={<DateTime />}/>
+                    <Route path="/sessao/:sessaoId" element={<Section/>}/>
                 </Routes>
             </Background>
         </BrowserRouter>
@@ -21,4 +23,6 @@ export default function App(){
 const Background = styled.div`
     padding-top: 68px;
     padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 `
