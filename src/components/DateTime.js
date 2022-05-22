@@ -6,12 +6,12 @@ import axios from "axios";
 
 
 
-function Days({id, weekday, date, showtimes}){
+function Days({weekday, date, showtimes}){
     return(
         <SectionsDays>
             <span>{`${weekday} - ${date}`}</span>
             <Timetable>
-                {showtimes.map(hours => <Link to = {`sessao/${id}`}><button>{hours.name}</button></Link>)}
+                {showtimes.map(hours => <Link to = {`/sessao/${hours.id}`}><button>{hours.name}</button></Link>)}
             </Timetable>
         </SectionsDays>
     )
@@ -32,7 +32,7 @@ export default function DateTime(){
             <Title>
                 Selecione o horário
             </Title>
-            {sectionsInfo?sectionsInfo.days.map(days => <Days id = {days.id} weekday = {days.weekday} date = {days.date} showtimes = {days.showtimes}/>):""}
+            {sectionsInfo?sectionsInfo.days.map(days => <Days weekday = {days.weekday} date = {days.date} showtimes = {days.showtimes}/>):""}
             <Footer imgURL={sectionsInfo.posterURL}>
                 {sectionsInfo.title}
             </Footer>
