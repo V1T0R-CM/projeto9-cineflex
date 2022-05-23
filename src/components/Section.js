@@ -112,6 +112,7 @@ function PurchaserInfo({name, setName, cpf, setCpf, selectedId, selectedName, fi
             <input
               type="text"
               placeholder="Digite seu CPF..."
+              maxLength={11}
               id="cpf"
               value={cpf}
               required

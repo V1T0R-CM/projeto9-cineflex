@@ -46,7 +46,7 @@ const SectionsDays = styled.div`
     margin-bottom: 22px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 333px;
     
     span{
         font-weight: 400;

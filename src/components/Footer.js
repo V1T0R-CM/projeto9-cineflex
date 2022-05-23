@@ -22,6 +22,7 @@ const FooterBar = styled.footer`
     border: 1px solid #9EADBA;
     display:flex;
     align-items:center;
+    justify-content: center;
 
     div{
         background: #FFFFFF;
