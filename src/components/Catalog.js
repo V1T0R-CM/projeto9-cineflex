@@ -59,6 +59,12 @@ const Frame = styled.div`
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     margin: 15px;
+
+    &:hover{
+        transition: all 0.2s;
+        transform: translate(0px,-7px);
+        box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.3);
+    }
 `
 
 const PostImg = styled.img`
