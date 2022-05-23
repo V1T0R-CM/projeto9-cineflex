@@ -4,6 +4,7 @@ import Header from "./Header"
 import Catalog from "./Catalog"
 import DateTime from './DateTime';
 import Section from "./Section";
+import Success from "./Success";
 
 export default function App(){
     return (
@@ -14,6 +15,7 @@ export default function App(){
                     <Route path="/" element={<Catalog />}/>
                     <Route path="/filme/:filmId" element={<DateTime />}/>
                     <Route path="/sessao/:sessaoId" element={<Section />}/>
+                    <Route path="/sucesso" element={<Success/>}/>
                 </Routes>
             </Background>
         </BrowserRouter>

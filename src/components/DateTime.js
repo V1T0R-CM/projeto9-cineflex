@@ -47,7 +47,6 @@ const SectionsDays = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-
     
     span{
         font-weight: 400;
@@ -64,22 +63,24 @@ const Title = styled.span`
     margin-top: 30px;
     margin-bottom: 30px;
 `
+
 const Timetable = styled.div`
     button{
-            width: 83px;
-            height: 43px;
-            background-color: #E8833A;
-            font-weight: 400;
-            font-size: 18px;
-            color: #FFFFFF;
-            border-radius: 3px;
-            border: hidden;
-            margin: 4px;
-        }
+        width: 83px;
+        height: 43px;
+        background-color: #E8833A;
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFFFFF;
+        border-radius: 3px;
+        border: hidden;
+        margin: 4px;
+    }
 `
 
 const Main = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 75px;
 `
