@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
-        <Link to="/"><Headerbar>Cineflix</Headerbar></Link>
+        <Link to="/"><Headerbar>CINEFLEX</Headerbar></Link>
     )
 }
 

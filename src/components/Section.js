@@ -50,7 +50,7 @@ function Legendtable(){
     )
 }
 
-function PurchaserInfo({name, setName, cpf, setCpf, selectedId, selectedName, filmTitle, date}){
+function PurchaserInfo({name, setName, cpf, setCpf, selectedId, selectedName, filmTitle, date, hour}){
     const navigate = useNavigate()
 
     function submitData(event){
@@ -89,7 +89,7 @@ function PurchaserInfo({name, setName, cpf, setCpf, selectedId, selectedName, fi
         }
 
         if(infosValidas){
-            navigate("/sucesso", {replace:true, state:{filmTitle, date, name, cpf, selectedId, selectedName}})
+            navigate("/sucesso", {replace:true, state:{filmTitle, date, hour, name, cpf, selectedId, selectedName}})
         }
         else{
             alert(messege)
@@ -144,7 +144,7 @@ export default function Section(){
                 {sectionInfo ?  sectionInfo.seats.map(seat => <Seats name = {seat.name} id = {seat.id} isAvailable = {seat.isAvailable} selectedId = {selectedId} setSelectedId = {setSelectedId} selectedName={selectedName} setSelectedName={setSelectedName}/>) : ""}
             </TableSeats>
             <Legendtable/>
-            {sectionInfo?<PurchaserInfo name={name} setName={setName} cpf={cpf} setCpf={setCpf} selectedId = {selectedId} selectedName={selectedName} filmTitle = {sectionInfo.movie.title} date = {sectionInfo.day.date}/> : ""}
+            {sectionInfo?<PurchaserInfo name={name} setName={setName} cpf={cpf} setCpf={setCpf} selectedId = {selectedId} selectedName={selectedName} filmTitle = {sectionInfo.movie.title} date = {sectionInfo.day.date} hour={sectionInfo.name}/> : ""}
             {sectionInfo?
             <Footer imgURL={sectionInfo.movie.posterURL}>
                 {sectionInfo.movie.title}<br/>{`${sectionInfo.day.weekday} - ${sectionInfo.name}`}
